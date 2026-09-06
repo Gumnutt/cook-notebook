@@ -7,7 +7,7 @@ import Directory from '../components/Directory.astro';
 const allNotes: NoteEntry[] = await getCollection('notes');
 ---
 
-<Layout>
+<Layout title="">
 	<header>
 		<h1>Cooking Notebook</h1>
 		<p>Findings from the kitchen, 2026 → present. {allNotes.length} entries.</p>
