@@ -1,0 +1,39 @@
+cb-directory {
+  ol {
+    li {
+      padding: 0;
+      &:before {
+        all: revert;
+      }
+    }
+    a{
+      display: grid;
+      align-items: baseline;
+      padding: .95em 0.5em;
+      text-decoration: none;
+      grid-template-columns: 2.8em minmax(0, 1fr) 6em;
+      column-gap: 1em;
+      &:hover {
+        background-color: #eef4f4;
+      }
+    }
+    span {
+      font-weight: 500;
+      color: #7c8380;
+      &:first-of-type{
+        font-size: .78em;
+        font-family: var(--font-mono);
+        font-variant-numeric: tabular-nums;
+        color: #7c8380;
+      }
+      &:last-of-type{
+        font-size: .78em;
+        font-family: var(--font-mono);
+        font-variant-numeric: tabular-nums;
+        text-align: right;
+        color: #7c8380;
+        white-space: nowrap;
+      }
+    }
+  }
+}

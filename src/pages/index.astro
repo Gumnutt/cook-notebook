@@ -1,17 +1,16 @@
 ---
+import { getCollection } from 'astro:content';
+import type { NoteEntry } from '../content.config';
+import Layout from '../layouts/Layout.astro';
+import Directory from '../components/Directory.astro';
 
+const allNotes: NoteEntry[] = await getCollection('notes');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<header>
+		<h1>Cooking Notebook</h1>
+		<p>Findings from the kitchen, 2020 → present. {allNotes.length} entries.</p>
+	</header>
+	<Directory items={allNotes} />
+</Layout>

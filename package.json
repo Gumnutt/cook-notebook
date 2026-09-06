@@ -12,7 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.3.1"
+    "@astrojs/mdx": "^7.0.8",
+    "astro": "^7.3.1",
+    "lightningcss": "^1.33.0"
   },
   "allowScripts": {
     "esbuild": true

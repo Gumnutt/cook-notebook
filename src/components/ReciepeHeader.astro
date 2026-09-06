@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+}
+const { title, description, date } = Astro.props as Props;
+---
+<header>
+  <small><a href="/">← Back to list</a></small>
+  <h1>{title}</h1>
+  <time datetime={date.toISOString()}>{date.toLocaleDateString().replace(/\//g, '-')}</time>
+</header>

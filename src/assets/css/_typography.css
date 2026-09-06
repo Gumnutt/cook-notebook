@@ -1,0 +1,82 @@
+:where(*) {
+  font-size: 16.5px;
+  @media (width > 767px){
+    font-size: 18px;
+  }
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  margin-bottom: 1em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: .5em;
+  font-size: 2em;
+  letter-spacing: -.01em;
+}
+
+h2{
+  margin: 3em 0 1.2em;
+  border-bottom: 1px solid #bcc1b9;
+  padding-bottom: .6em;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+small {
+  font-size: smaller;
+  & > * {
+    font-size: inherit;
+  }
+  a {
+    font-size: .72em;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #7c8380;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul {
+  & > li {
+    border-bottom: 1px solid #eaece6;
+    padding: .7em 0;
+  }
+}
+
+ol {
+  counter-reset: step;
+  & > li {
+    position: relative;
+    border-bottom: 1px solid #eaece6;
+    padding: .95em 0 .95em 3.2em;
+    counter-increment: step;
+    &:before {
+      content: counter(step, decimal-leading-zero);
+      position: absolute;
+      top: 1.45em;
+      left: 0;
+      font-size: .78em;
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      color: #7c8380;
+    }
+  }
+}

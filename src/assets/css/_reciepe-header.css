@@ -1,0 +1,7 @@
+header {
+  time {
+    font-size: .72em;
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}

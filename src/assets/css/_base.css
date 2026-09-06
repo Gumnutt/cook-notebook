@@ -1,0 +1,26 @@
+html{
+  background-color: var(--surface);
+}
+
+header {
+  margin-top: 1.5em;
+  margin-bottom: 2.5em;
+  padding-bottom: 1.5em;
+  &:has(time){
+    border-bottom: 1px solid #bcc1b9;
+  }
+}
+
+footer{
+  padding-block: 3em 2em;
+}
+
+tac-wrapper {
+  --tac-wrapper-content-width: 720px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(1.25em, 1fr) minmax(auto, var(--tac-wrapper-content-width)) minmax(1.25em, 1fr);
+  & > * {
+    grid-column: 2/3;
+  }
+}

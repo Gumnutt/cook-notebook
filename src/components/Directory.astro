@@ -1,0 +1,23 @@
+---
+import type { NoteEntry } from '../content.config';
+
+interface Props {
+  items: NoteEntry[];
+}
+
+const { items } = Astro.props as Props;
+---
+
+<cb-directory>
+  <ol>
+    {items.map((item, index) => (
+      <li>
+        <a href={`/notes/${item.id}`}>
+          <span>{(index + 1).toString().padStart(2, '0')}</span>
+          <span>{item.data.title}</span>
+          <span>{item.data.published.toLocaleDateString().replace(/\//g, '-')}</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</cb-directory>
