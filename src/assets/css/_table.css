@@ -27,8 +27,25 @@ table {
         min-width: 9em;
       }
     }
+    & > * {
+      font-size: inherit;
+    }
+    a {
+      color: oklch(68.195% 0.1915 45.204);
+    }
     &[theme="action"] {
       background: #eef4f4;
+      font-size: .64em;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #24292c;
+    }
+    &[theme="optional"] {
+      background-image: linear-gradient(45deg, #eeeef4 25%, #eef4f4 25%, #eef4f4 50%, #eeeef4 50%, #eeeef4 75%, #eef4f4 75%, #eef4f4 100%);
+      background-size: 14px 14px;
       font-size: .64em;
       font-family: var(--font-mono);
       font-weight: 600;

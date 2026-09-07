@@ -80,3 +80,11 @@ ol {
     }
   }
 }
+
+a {
+  font-size: inherit;
+  color: oklch(68.195% 0.1915 45.204);;
+  &:hover {
+    text-decoration: none;
+  }
+}
